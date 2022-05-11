@@ -10,13 +10,13 @@
     <string name="msg_Dev_Arr_Empty">Devise d\'arrivée vide</string>
     <string name="msg_Montant_Empty">Montant Vide</string>
 
-    <string-array name="liste_devises">
-        <item></item>
-        <item>Euro</item>
-        <item>Dollars US</item>
-        <item>Francs CFA</item>
-        <item>Yen</item>
-        <item>Dirham</item>
-        <item>Livre</item>
-    </string-array>
+<!--    <string-array name="liste_devises">-->
+<!--        <item></item>-->
+<!--        <item>Euro</item>-->
+<!--        <item>Dollars US</item>-->
+<!--        <item>Francs CFA</item>-->
+<!--        <item>Yen</item>-->
+<!--        <item>Dirham</item>-->
+<!--        <item>Livre</item>-->
+<!--    </string-array>-->
 </resources>

@@ -6,13 +6,20 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Set;
+
 
 public class MainActivity extends AppCompatActivity {
+
+
+
 
 
 
@@ -21,9 +28,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        chargerSpinner(R.id.spinner);
+        chargerSpinner(R.id.spinner2);
+
+
+
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
         EditText montant =(EditText) findViewById(R.id.montant);
+
 
 
 
@@ -99,10 +112,13 @@ public class MainActivity extends AppCompatActivity {
                 String spinner2Text = (String) spinner2.getSelectedItem().toString();
                 String montantText = (String)  montant.getText().toString();
 
+            // Checking if the spinnerText is empty. If it is empty, it will show a toast message.
             if(spinnerText.isEmpty()){
+
                 Toast.makeText(getApplicationContext(), R.string.msg_Dev_Dep_Empty,Toast.LENGTH_SHORT).show();
 
             }
+            // Checking if the spinner2Text is empty. If it is empty, it will show a toast message.
             if(spinner2Text.isEmpty()){
                 Toast.makeText(getApplicationContext(), R.string.msg_Dev_Arr_Empty,Toast.LENGTH_SHORT).show();
                 Log.d("MainActivity",getString(R.string.msg_Dev_Arr_Empty));
@@ -127,6 +143,24 @@ public class MainActivity extends AppCompatActivity {
         Button convert = (Button) findViewById(R.id.convertir);
         convert.setOnClickListener(btnConvert);
 
+
+    }
+    public ArrayList<String> chargeDevises() {
+
+            ArrayList<String> listeDevise = new ArrayList<String>(Convert.getConversionTable().keySet());
+            Log.d("MainActivity",listeDevise.toString());
+            return listeDevise;
+
+    }
+
+    public Spinner chargerSpinner(int idView) {
+            Log.d("MainActivity",idView+" coucou");
+            final Spinner spinner = (Spinner)findViewById(idView);
+            final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked , chargeDevises());
+
+                spinner.setAdapter(adapter);
+
+            return spinner;
 
     }
 }
