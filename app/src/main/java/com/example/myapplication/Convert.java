@@ -1,4 +1,4 @@
-package metier;
+package com.example.myapplication;
 
 import java.util.*;
 

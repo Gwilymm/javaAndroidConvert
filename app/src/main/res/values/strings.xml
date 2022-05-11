@@ -1,15 +1,20 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Mon convertissuer de poche</string>
     <string name="depart">Devise de départ</string>
     <string name="arrive">Devise d\'arrivée</string>
     <string name="montant">Montant</string>
     <string name="convertir">Convertir</string>
     <string name="quitter">Quitter</string>
+    <string name="identicDevise">Devises identique</string>
+    <string name="msg_Dev_Dep_Empty">Devise de départ vide</string>
+    <string name="msg_Dev_Arr_Empty">Devise d\'arrivée vide</string>
+    <string name="msg_Montant_Empty">Montant Vide</string>
 
     <string-array name="liste_devises">
         <item></item>
         <item>Euro</item>
-        <item>USDollar</item>
+        <item>Dollars US</item>
+        <item>Francs CFA</item>
         <item>Yen</item>
         <item>Dirham</item>
         <item>Livre</item>

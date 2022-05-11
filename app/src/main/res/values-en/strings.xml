@@ -1,17 +1,22 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="depart">Devise de départ</string>
-    <string name="arrive">Devise d\'arrivée</string>
-    <string name="montant">Montant</string>
-    <string name="convertir">Convertir</string>
-    <string name="quitter">Quitter</string>
+    <string name="app_name">My Pocket Exchange</string>
+    <string name="depart">Start Currency</string>
+    <string name="arrive">Destination Currency</string>
+    <string name="montant">Amount</string>
+    <string name="convertir">Convert</string>
+    <string name="quitter">Quit</string>
+    <string name="identicDevise">Identical currency</string>
+    <string name="msg_Dev_Dep_Empty">Devise de départ vide</string>
+    <string name="msg_Dev_Arr_Empty">Devise d\'arrivée vide</string>
+    <string name="msg_Montant_Empty">Montant Vide</string>
 
     <string-array name="liste_devises">
         <item></item>
         <item>Euro</item>
-        <item>USDollar</item>
+        <item>Dollar US</item>
         <item>Yen</item>
+        <item>Francs CFA</item>
         <item>Dirham</item>
-        <item>Livre</item>
+        <item>Pound</item>
     </string-array>
 </resources>
