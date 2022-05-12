@@ -9,14 +9,7 @@
     <string name="msg_Dev_Dep_Empty">Start currency is empty</string>
     <string name="msg_Dev_Arr_Empty">Destination currency Is empty</string>
     <string name="msg_Montant_Empty">Your amout, as your brain, is empty</string>
+    <string name="resultat">The result is : </string>
 
-    <string-array name="liste_devises">
-        <item></item>
-        <item>Euro</item>
-        <item>Dollar US</item>
-        <item>Yen</item>
-        <item>Francs CFA</item>
-        <item>Dirham</item>
-        <item>Pound</item>
-    </string-array>
+
 </resources>

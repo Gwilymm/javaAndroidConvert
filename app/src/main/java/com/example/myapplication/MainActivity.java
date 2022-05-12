@@ -1,7 +1,9 @@
 package com.example.myapplication;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -133,7 +136,15 @@ public class MainActivity extends AppCompatActivity {
                     Double convertion = (Double) Convert.convertir(spinnerText, spinner2Text, Double.valueOf(montantText));
 
                     String resultConvert = (String) convertion.toString();
-                    Toast.makeText(getApplicationContext(), resultConvert, Toast.LENGTH_SHORT).show();
+                    Intent wannaConvert = new Intent(MainActivity.this, NewActivity.class);
+
+
+                    wannaConvert.putExtra("Montant",montantText);
+                    wannaConvert.putExtra("Devisedepart",spinnerText);
+                    wannaConvert.putExtra("Devisearrive", spinner2Text);
+
+                    startActivityForResult(wannaConvert,1);
+
                 }
             }catch (NumberFormatException e){
                 Toast.makeText(getApplicationContext(),R.string.msg_Montant_Empty,Toast.LENGTH_SHORT).show();
@@ -148,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
     public ArrayList<String> chargeDevises() {
 
             ArrayList<String> listeDevise = new ArrayList<String>(Convert.getConversionTable().keySet());
+            listeDevise.add("");
             Log.d("MainActivity",listeDevise.toString());
             return listeDevise;
 
@@ -162,6 +174,16 @@ public class MainActivity extends AppCompatActivity {
 
             return spinner;
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        String affichageRetour = data.getStringExtra("retour");
+        Log.d("MainActivity",affichageRetour);
+        TextView affichageResultat = findViewById(R.id.resultat);
+        affichageResultat.setText(affichageRetour);
     }
 }
 

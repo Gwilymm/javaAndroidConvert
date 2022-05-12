@@ -9,8 +9,9 @@
     <string name="msg_Dev_Dep_Empty">Devise de départ vide</string>
     <string name="msg_Dev_Arr_Empty">Devise d\'arrivée vide</string>
     <string name="msg_Montant_Empty">Montant Vide</string>
+    <string name="resultat">Le resultat est :</string>
 
-<!--    <string-array name="liste_devises">-->
+    <!--    <string-array name="liste_devises">-->
 <!--        <item></item>-->
 <!--        <item>Euro</item>-->
 <!--        <item>Dollars US</item>-->

@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/resultat"
@@ -11,4 +15,24 @@
         android:text="@string/resultat"
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="67dp" />
+
+    <TextView
+        android:id="@+id/affichageResultat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text=""
+
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/quitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+
+        tools:layout_editor_absoluteX="151dp"
+        android:text="@string/quitter"/>
+
+</LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
