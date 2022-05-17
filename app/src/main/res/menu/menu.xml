@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/option"
+        android:title="Convertir">
+    </item>
+    <item android:id="@+id/parametres"
+        android:title="Paramètres"/>
+    <item android:id="@+id/quitter"
+        android:title="@string/quitter"
+         />
+</menu>
